@@ -1,0 +1,116 @@
+
+#page-home{
+    height: 100vh; /*pegando toda a altura*/
+    background: url('../extras-aula-1/icones/home-background.svg') no-repeat; 
+    /* ../ = para sair de uma pasta tipo voltar uma */
+    background-position: 35vw bottom ; /*vai ter uma posição no eixo x e no eixo y*/
+
+}
+
+#page-home .content{
+    width: 90%; /*ele deixa sempre com 90% do tamanho da página*/
+    max-width: 1100px; /*mas não aceito mais que 1100px*/
+    /* margin-left: auto; ele coloca padrão e empurra o que estiver no fim. */
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+ #page-home header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-home header a{
+    display: flex;
+    font-weight: 700px;
+    color: var(--title-color);
+}
+
+
+#page-home header a span{
+    margin-right: 16px;
+    display: flex;
+    background-image: url('/extras-aula-1/icones/log-in.svg');
+    width: 20px;
+    height: 20px;
+
+}
+
+#page-home main{
+    max-width: 560px;
+    flex: 1;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1{
+    font-size: 54px;
+
+}
+
+#page-home p{
+    font-size: 24px;
+    line-height: 38px; /*altura da linha*/
+    margin-top: 24px;
+}
+
+#page-home main a{
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 40px;
+
+    background: var(--primary-color);
+
+    transition: 400ms; /*velocidade pra mudar de cor com o ccs abaixo*/
+    font-weight: bold;
+    color: white;
+}
+
+
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+
+
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after{
+    content: "";
+    background: url('../extras-aula-1/icones/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#page-home main a strong{
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
+

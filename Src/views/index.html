@@ -1,0 +1,55 @@
+<!-- atalho para colocar todo a estrutura html que não conhecia = ! + enter -->
+{% extends "layout.html" %}
+{# pego o que tá no index dentro do bloco e herda pro layout tudo que tiver no layout vai ser herdado pro index e vai aparecer na  #}
+{# chamada da página quando chamar o index. #}
+
+{# criando uma variável para substituir o page-home no id do layout.html  #}
+{% set pageId = "page-home" %}
+
+<title>Ecoleta</title>
+
+{% block styles %}
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/modal.css">
+{% endblock styles %}
+
+<!-- tomar cuidado pois as vezes pode sobreescrever colocar na ordem correta -->
+
+    {% block content %}
+
+    <div class="content">
+        <header>
+
+            <img src="/extras-aula-1/icones/logo.svg" alt="logoMarca">
+
+            <a class="absoluta" href="/creat-ponto">
+                <span></span>
+                cadastre um ponto de coleta
+            </a>
+
+        </header>
+
+        <main>
+
+            <h1>Seu marketplace de coleta de resíduos</h1>
+
+            <p>ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+
+            <a href="#">
+                <span></span>
+                <strong>
+                    Pesquisar ponto de coleta</a>
+
+            </main>
+
+        </div>
+
+    {% endblock content %}
+
+    {% block modal %}
+        {% include "partials/modal.html"%}
+    {% endblock modal %}
+
+    {% block scripts %}
+        <script src="/Script/home.js"></script>
+    {% endblock scripts %}

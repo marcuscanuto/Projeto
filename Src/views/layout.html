@@ -1,0 +1,57 @@
+<!-- atalho para colocar todo a estrutura html que não conhecia = ! + enter -->
+
+<!DOCTYPE html>
+
+<!-- protocolo http -->
+
+<html lang="pt_br"> <!-- ficar ligado com a linguagem sempre esqueço começar a anotar.-->
+<head>
+    <meta charset="UTF-8"> <!-- Para aceitar caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--tag para o site funcionar em diversos tamanhos de tela.-->
+    
+    
+    {% block title %}
+        <title>Ecoleta</title>
+        {# significa que se ele não achar um title ele vai usar esse aí #}
+    {% endblock title %}
+    
+
+    
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet"> -->
+    <!-- <a  link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"> -->
+    <!-- para não fazer duas chamadas na font lá -->
+    <!-- pega de depois de roboto no segundo link e até antes do '&' e apaga e coloca as informações da outra fonte.  -->
+    <a  link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!-- se não entender compara -->
+
+        <!-- font-family: 'Roboto', sans-serif;   regra para aplicar no css-->
+
+
+    <link rel="stylesheet" href="/style/main.css">
+
+        {% block styles %}
+        {% endblock styles %}
+
+
+        <link rel="stylesheet" href="/style/responsive.css">
+    <!-- tomar cuidado pois as vezes pode sobreescrever colocar na ordem correta -->
+
+    
+</head>
+<body>
+
+    <div id = {{pageId}}>
+
+            {% block content %}
+            {% endblock content %}
+    
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+</body>
+</html>

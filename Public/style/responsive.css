@@ -1,0 +1,50 @@
+
+    @media(max-width:900px){
+            #page-home{
+                background-position-x: 70vw;
+            }
+
+            #page-home .content{
+                align-items: center;
+                text-align: center;
+
+            }
+
+            .absoluta{
+                    position: absolute;
+                    bottom: 48px;
+                    left: 50%;
+                    transform: translateX(-50%); /*pega o meio do objeto*/
+            }
+
+            #page-search-results .cards{
+                grid-template-columns: 1fr;
+            }
+
+            #page-search-results .cards img{
+                height: 180px;
+            }
+
+            #page-create-point .field-group{
+                flex-direction: column;
+            }
+
+            #page-create-point .field-group .field+ .field{  /*o que tiver um field ao lado*/
+                margin-left: 0;
+
+            }
+
+            
+    }
+
+    @media(min-width:1840px){
+        #page-home{
+            background-position-x: 40vw;
+        }
+    }
+
+    @media(max-height:713px){
+            #page-home{
+                background-position-y: 200px;
+            }
+    }
